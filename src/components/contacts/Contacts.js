@@ -1,29 +1,9 @@
 import React, { Component } from 'react';
 import Contact from './Contact';
+import {connect} from 'react-redux';
 
 class Contacts extends Component {
-  state = {
-    contacts: [
-      {
-        id: 1,
-        name: 'Mohamed IDBRAHIM',
-        email: 'idbrahimdev@gmail.com',
-        phone: '0650303315'
-      },
-      {
-        id: 2,
-        name: 'Basma IDBRAHIM',
-        email: 'basma@gmail.com',
-        phone: '0650303316'
-      },
-      {
-        id: 3,
-        name: 'Walid IDBRAHIM',
-        email: 'walid@gmail.com',
-        phone: '0650303317'
-      }
-    ]
-  };
+  
 
   render() {
     const { contacts } = this.state;
@@ -40,4 +20,4 @@ class Contacts extends Component {
   }
 }
 
-export default Contacts;
+export default connect()(Contacts);
