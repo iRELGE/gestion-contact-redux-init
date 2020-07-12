@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TextInputGroup from '../layout/TextInputGroup';
+import {getContact,editContact} from '../../contactActions'
 
 class EditContact extends Component {
   state = {
@@ -37,9 +38,9 @@ class EditContact extends Component {
     };
 
     const { id } = this.props.match.params;
-
+    getContact(id);
     //// UPDATE CONTACT ////
-
+    editContact(updContact);
     // Clear State
     this.setState({
       name: '',
